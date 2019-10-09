@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  school_id: 1
+  reason: MyString
+  date: 2019-10-09 14:42:28
+  hours: 1
+  school: MyString
+  grade: 1
+  sped: false
+  counselor_info: MyString
+  guardian: MyString
+  address: MyString
+  home_no: MyString
+  cell: MyString
+  email: MyString
+
+two:
+  name: MyString
+  school_id: 1
+  reason: MyString
+  date: 2019-10-09 14:42:28
+  hours: 1
+  school: MyString
+  grade: 1
+  sped: false
+  counselor_info: MyString
+  guardian: MyString
+  address: MyString
+  home_no: MyString
+  cell: MyString
+  email: MyString

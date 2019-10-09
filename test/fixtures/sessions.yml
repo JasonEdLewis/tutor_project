@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: one
+  instructor: one
+  admin: one
+  date: 2019-10-09 14:50:52
+  time: 2019-10-09 14:50:52
+  home: false
+  subject: MyString
+  location: MyString
+  instruction: MyString
+
+two:
+  student: two
+  instructor: two
+  admin: two
+  date: 2019-10-09 14:50:52
+  time: 2019-10-09 14:50:52
+  home: false
+  subject: MyString
+  location: MyString
+  instruction: MyString
