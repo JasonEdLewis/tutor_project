@@ -1,7 +1,12 @@
-Rails.application.routes.draw do
-  resources :sessions
-  resources :admins
-  resources :instructors
-  resources :students
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+# Be sure to restart your server when you modify this file.
+# Avoid CORS issues when API is called from the frontend app.
+# Handle Cross-Origin Resource Sharing (CORS) in order to accept cross-origin AJAX requests.
+# Read more: https://github.com/cyu/rack-cors
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins '*'
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
 end
