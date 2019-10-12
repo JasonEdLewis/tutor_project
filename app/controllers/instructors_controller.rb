@@ -21,9 +21,9 @@ class InstructorsController < ApplicationController
         end
     end
 
-    def destory
+    def destroy
         instructor = Instructor.find(params[:id])
-        instructor.destory
+        instructor.destroy
     end
 
         private
