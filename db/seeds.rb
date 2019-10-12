@@ -20,12 +20,12 @@ john = Student.create(name: "John", grade: 8, school:"Grady", hours:10, guardian
 
 walter = Student.create(name: "walter", grade: 11, school:"WP High School", hours:8, guardian:"Jill ", home_no:"(845) 993-0749", cell: "(845)303-9984", counselor_info:"Ron Miller, Ron@Miller.com", reason:"transfer")
 
-# ===================== Instructor ========================== #
+# # ===================== Instructor ========================== #
 Rolando = Instructor.create(name:"Rolando Rodrigez", subject:"Science", specialty: "biology", hours:30)
 Hippolita = Instructor.create(name:"Hippolita Johnson", subject:"English", specialty: "Novels", hours:30)
 Ken = Instructor.create(name:"Ken Shultz", subject:"Math", specialty: "Algebra", hours:30)
 
-# ===================== Sessions ========================== #
+# # ===================== Sessions ========================== #
 seesion1 = Session.create(student_id: 1, instructor_id: 1, admin_id:1, date:"20080915T155300+0500", time:"9:30", home: true, subject:"biology", location:"123 Main street, Mt. Vernon, NY 10550", instruction:"Todd is a great student! ") 
 
 seesion2 = Session.create(student_id:2, instructor_id: 3, admin_id:2, date:"20080915T155300+0500", time:"11:30", home: true, subject:"biology", location:"123 Main street, Mt. Vernon, NY 10550", instruction:"John needs double time ") 

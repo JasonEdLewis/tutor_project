@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-
+    skip_before_action :verify_authenticity_token
         def show
             student = Student.find(params[:id])
             render json: student.to_json(:except => [:updated_at, :created_at])
@@ -15,6 +15,7 @@ class StudentsController < ApplicationController
             end
         end
 
+        private
         def student_params
             params.require(:student).permit(:name,:school_id,:reason,:date,:hours,:school,:grade,:sped,:counselor_info,:guardian,:address,:home_no,:cell,:email)
         end
