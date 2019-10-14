@@ -14,11 +14,11 @@ Hy = Admin.create(username:"Hy", password:"acb123")
 
 
 # ===================== Students ========================== #
-chad = Student.create(name: "Chad", grade: 10, school:"Thorton", hours:8, guardian:"Betty ", home_no:"(646) 123-4567", cell: "(917) 398-4815", counselor_info:"Frank Harris, frank@Harris.com", reason:"suspension")
+chad = Student.create(name: "Chad", school_id:1234, grade: 10, school:"Thorton", hours:8, guardian:"Betty ", home_no:"(646) 123-4567", cell: "(917) 398-4815", counselor_info:"Frank Harris, frank@Harris.com", reason:"suspension")
 
-john = Student.create(name: "John", grade: 8, school:"Grady", hours:10, guardian:"Jill ", home_no:"(914) 555-6666", cell: "(914) 333-4444", counselor_info:"jim jones, jones@jimjines.com", reason:"medical")
+john = Student.create(name: "John", school_id:2345, grade: 8, school:"Grady", hours:10, guardian:"Jill ", home_no:"(914) 555-6666", cell: "(914) 333-4444", counselor_info:"jim jones, jones@jimjines.com", reason:"medical")
 
-walter = Student.create(name: "walter", grade: 11, school:"WP High School", hours:8, guardian:"Jill ", home_no:"(845) 993-0749", cell: "(845)303-9984", counselor_info:"Ron Miller, Ron@Miller.com", reason:"transfer")
+walter = Student.create(name: "walter", school_id:3457, grade: 11, school:"WP High School", hours:8, guardian:"Jill ", home_no:"(845) 993-0749", cell: "(845)303-9984", counselor_info:"Ron Miller, Ron@Miller.com", reason:"transfer")
 
 # # ===================== Instructor ========================== #
 Rolando = Instructor.create(name:"Rolando Rodrigez", subject:"Science", specialty: "biology", hours:30)
