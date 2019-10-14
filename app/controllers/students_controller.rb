@@ -1,5 +1,10 @@
 class StudentsController < ApplicationController
     skip_before_action :verify_authenticity_token
+
+        def index
+            students = Student.all 
+            render json: students, except: [:created_at, :updated_at]
+        end
         def show
             student = Student.find(params[:id])
             render json: student.to_json(:except => [:updated_at, :created_at])
