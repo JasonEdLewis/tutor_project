@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
 
         def create
             student = Student.create(student_params)
-            byebug
+
             if student.valid?
                 student.save
                 render json: student
