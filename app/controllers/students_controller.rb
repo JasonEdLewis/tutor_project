@@ -7,7 +7,9 @@ class StudentsController < ApplicationController
         end
         def show
             student = Student.find(params[:id])
-            render json: student.to_json(:include => {:sessions => {:except =>[:updated_at, :created_at]}},:except => [:updated_at, :created_at])
+            render json: student.to_json(:include => {:sessions => {:except =>[:updated_at, :created_at]},
+            :admins => {:except =>[:updated_at, :created_at,:password_digest]},
+            :instructors => {:except =>[:updated_at, :created_at]}},:except => [:updated_at, :created_at])
         end
 
         def create
