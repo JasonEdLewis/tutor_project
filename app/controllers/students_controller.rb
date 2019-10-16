@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
 
         def index
             students = Student.all 
-            render json: students.to_json(:include => {:sessions => {:except =>[:updated_at, :created_at]}},:except => [:updated_at, :created_at])
+            render json: students.to_json(:include => {:sessions => {:except =>[:updated_at, :created_at]},:instructors => {:except =>[:updated_at, :created_at]}},:except => [:updated_at, :created_at])
         end
         def show
             student = Student.find(params[:id])
