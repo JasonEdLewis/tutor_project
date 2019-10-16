@@ -24,6 +24,8 @@ billy = Student.create(name: "Billy Weldon", school_id:9354, grade: 9, school:"R
 
 xavier = Student.create(name: "Xavier Fuller", school_id:1659, grade: 10, school:"Pelham High", hours:10, guardian:"Monica Fuller", home_no:"(914) 328-1296", cell: "(914)908-97143", counselor_info:"David Cozart, Dave@Cozart.com", reason:"suspension", subject:"science")
 
+eva = Student.create(name: "Eva Thomas", school_id:9831, grade: 11, school:"Valhalla HS", hours:4, guardian:"Monica Thomas", home_no:"(917) 834-0752", cell: "(646)380-67123", counselor_info:"Brian Nembhard, Brian@Nembhard.com", reason:"suspension", subject:"english")
+
 # # ===================== Instructor ========================== #
 Rolando = Instructor.create(name:"Rolando Rodrigez", subject:"science", specialty: "biology", hours:30)
 Hippolita = Instructor.create(name:"Hippolita Johnson", subject:"english", specialty: "Novels", hours:30)
