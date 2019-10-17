@@ -23,8 +23,13 @@ Rails.application.routes.draw do
   get '/admins/:id', to: 'admins#show'   #REMEBER TO DELETE OR COMMENT OUT THESE ROUTES AFTER SETTING UP AUTH
   post '/admins', to: 'admins#create'
   
-  post '/logins', to: 'logins#create'
 
-  get '/profiles', to: 'profiles#show'
-
+  namespace :api do
+   namespace :v1 do
+        post '/login', to: 'auth#create'
+        post '/signup', to: 'admins#create'
+        get '/profile', to: 'admins#profile'
+      end
+    end
+    
 end
