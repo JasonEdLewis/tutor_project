@@ -19,17 +19,18 @@ Rails.application.routes.draw do
    # ADMINS
   # resources :admins
 
-  get '/admins', to: 'admins#index'      #REMEBER TO DELETE OR COMMENT OUT THESE ROUTES AFTER SETTING UP AUTH
-  get '/admins/:id', to: 'admins#show'   #REMEBER TO DELETE OR COMMENT OUT THESE ROUTES AFTER SETTING UP AUTH
-  post '/admins', to: 'admins#create'
+
   
 
   namespace :api do
    namespace :v1 do
-        post '/login', to: 'auth#create'
+        post '/login', to: 'auth#login'
         post '/signup', to: 'admins#create'
         get '/profile', to: 'admins#profile'
+        get '/admins', to: 'admins#index'      #REMEBER TO DELETE OR COMMENT OUT THESE ROUTES AFTER SETTING UP AUTH
+        get '/admins/:id', to: 'admins#show'   #REMEBER TO DELETE OR COMMENT OUT THESE ROUTES AFTER SETTING UP AUTH
+        post '/admins', to: 'admins#create'
       end
     end
-    
+
 end

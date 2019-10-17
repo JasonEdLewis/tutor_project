@@ -1,15 +1,18 @@
 class Api::V1::AuthController < ApplicationController
-    skip_before_action
+    skip_before_action :verify_authenticity_token
 
     def login
+        # byebug
         admin = Admin.find_by(username: params[:username])
-        if(admin && admin.authenticate(params[:password]))
-         encoded_token = encode_token(user_payload(admin))
-         render json: {token: encoded_token}
+
+        if (admin && admin.authenticate(params[:password]))
+            payload = { admin_id: admin.id }  
+            token = JWT.encode payload, 'sin-city' ,'HS256'
+
+            render json: {token: token }
         else 
-            render json: {message:"Sorry, wrong Username or Password"}
+            render json: {message: "Please enter valid username or password."}
         end
-    
     end
 
 end
