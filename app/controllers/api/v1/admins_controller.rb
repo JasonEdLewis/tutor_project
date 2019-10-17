@@ -1,4 +1,4 @@
-class AdminsController < ApplicationController
+class Api::V1::AdminsController < ApplicationController
     skip_before_action :verify_authenticity_token
 
 
@@ -18,13 +18,17 @@ class AdminsController < ApplicationController
         # byebug
         if admin.valid?
             admin.save
-            render json: admin, except: [:created_at,:updated_at ]
+            render json: {token: encode_token(admin)}
+            # admin, except: [:created_at,:updated_at ]
         else
-            render json: {message: "Please Enter a valid username & password"}
+            render json: {errors: admin.errors.full_messages}
         end
     end
 
-
+    def profile
+        if current_admin
+        render json: current_admin
+    end
         private
 
     def admin_params
