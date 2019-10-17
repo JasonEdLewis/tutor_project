@@ -8,11 +8,12 @@ class SessionsController < ApplicationController
 
     def show
         session = Session.find(params[:id])
-        render json: sessions.to_json(:include => {:student => {:except =>[:updated_at, :created_at]}, :instructor => {:except =>[:updated_at, :created_at]}, :admin=> {:except =>[:updated_at, :created_at, :password_digest]}}, :except => [:updated_at, :created_at])
+        render json: session.to_json(:include => {:student => {:except =>[:updated_at, :created_at]}, :instructor => {:except =>[:updated_at, :created_at]}, :admin=> {:except =>[:updated_at, :created_at, :password_digest]}}, :except => [:updated_at, :created_at])
     end
 
     def create
         session = Session.create(session_params)
+       
         if session.valid?
             session.save
             render json: session.to_json(:include => {:student => {:except =>[:updated_at, :created_at]}, :instructor => {:except =>[:updated_at, :created_at]}, :admin=> {:except =>[:updated_at, :created_at, :password_digest]}}, :except => [:updated_at, :created_at])
