@@ -1,9 +1,21 @@
 class AdminsController < ApplicationController
     skip_before_action :verify_authenticity_token
 
+
+    def index
+        admins = Admin.all 
+        render json: admins
+    end
+
+    
+    def show
+        admin = Admin.find(params[:id])
+        render json: admin
+    end
+
     def create
         admin = Admin.create(admin_params)
-        byebug
+        # byebug
         if admin.valid?
             admin.save
             render json: admin, except: [:created_at,:updated_at ]

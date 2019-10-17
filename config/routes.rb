@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
    # ADMINS
   # resources :admins
+
+  get '/admins', to: 'admins#index'      #REMEBER TO DELETE OR COMMENT OUT THESE ROUTES AFTER SETTING UP AUTH
+  get '/admins/:id', to: 'admins#show'   #REMEBER TO DELETE OR COMMENT OUT THESE ROUTES AFTER SETTING UP AUTH
   post '/admins', to: 'admins#create'
   
   post '/logins', to: 'logins#create'
