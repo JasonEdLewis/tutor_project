@@ -13,7 +13,7 @@ class Api::V1::AdminsController < ApplicationController
 
     def create
         admin = Admin.create(admin_params)
-        # byebug
+      
         if admin.valid?
 
             payload = {admin_id: admin.id}
