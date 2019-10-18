@@ -25,10 +25,15 @@ class Api::V1::AdminsController < ApplicationController
         end
     end
 
-    # def profile
-    #     if current_admin
-    #     render json: current_admin
-    # end
+    def profile
+    
+       token = request.headers["Authorization"]
+       decoded = JWT.decode token, 'sin-city', true, { algorithm: 'HS256' }
+       admin_id = decoded[0]["admin_id"]
+       admin = Admin.find(admin_id)
+       render json: admin
+
+    end
         private
 
     def admin_params
