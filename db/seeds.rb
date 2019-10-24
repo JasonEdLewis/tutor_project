@@ -32,8 +32,8 @@ Hippolita = Instructor.create(name:"Hippolita Johnson", subject:"english", speci
 Ken = Instructor.create(name:"Ken Shultz", subject:"math", specialty: "Algebra", hours:30)
 
 # # ===================== Sessions ========================== #
-seesion1 = Session.create(student_id: 1, instructor_id: 1, admin_id:1, date:"20080915T155300+0500", time:"9:30", home: true, subject:"biology", location:"123 Main street, Mt. Vernon, NY 10550", instruction:"Todd is a great student! ") 
+seesion1 = Session.create(student_id: 1, instructor_id: 1, admin_id:1, date:"20190915T153000+0500", time:"9:30", home: true, subject:"biology", location:"123 Main street, Mt. Vernon, NY 10550", instruction:"Todd is a great student! ") 
 
-seesion2 = Session.create(student_id:2, instructor_id: 3, admin_id:2, date:"20080915T155300+0500", time:"11:30", home: true, subject:"biology", location:"123 Main street, Mt. Vernon, NY 10550", instruction:"John needs double time ") 
+seesion2 = Session.create(student_id:2, instructor_id: 3, admin_id:2, date:"201901015T140000+0500", time:"11:30", home: true, subject:"biology", location:"123 Main street, Mt. Vernon, NY 10550", instruction:"John needs double time ") 
 
-seesion3 = Session.create(student_id:3, instructor_id: 2, admin_id:3, date:"20080915T155300+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
+seesion3 = Session.create(student_id:3, instructor_id: 2, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
