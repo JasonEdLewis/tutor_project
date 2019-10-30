@@ -2,6 +2,7 @@ class InstructorsController < ApplicationController
     skip_before_action :verify_authenticity_token
    
 
+
     def index
         instructors = Instructor.all 
         render json: instructors, except: [:created_at, :updated_at]
@@ -22,6 +23,7 @@ class InstructorsController < ApplicationController
         end
     end
 
+
     def edit
         instructor = Instructor.find(params[:id])
     end 
@@ -30,6 +32,7 @@ class InstructorsController < ApplicationController
         instructor = Instructor.find_by(id: params[:id])
         instructor.update(instructor_params)
         render json: instructor, except: [:created_at, :updated_at]
+
     end
 
     def destroy
@@ -46,9 +49,6 @@ class InstructorsController < ApplicationController
         def update_instructor_params
             params.permit(:name,:subject,:specialty,:hours)
         end
-
-        
- 
 
 
 end

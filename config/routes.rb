@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
     # INSTRUCTORS
+
     resources :instructors, only: [:index, :show,:edit, :update, :create, :destroy]
  
+
 
     # STUDENTS
   get '/students', to: 'students#index'
