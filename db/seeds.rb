@@ -26,10 +26,18 @@ xavier = Student.create(name: "Xavier Fuller", school_id:1659, grade: 10, school
 
 eva = Student.create(name: "Eva Thomas", school_id:9831, grade: 11, school:"Valhalla HS", hours:4, guardian:"Monica Thomas", home_no:"(917) 834-0752", cell: "(646)380-67123", counselor_info:"Brian Nembhard, Brian@Nembhard.com", reason:"suspension", subject:"english")
 
+Fred = Student.create(name: "Fred Tunrner", school_id:8274, grade: 10, school:"Woodlands HS", hours:6, guardian:"Tanisha Turner", home_no:"(914) 997-7174", cell: "(718)380-1439", counselor_info:"Brian Nembhard, Brian@Nembhard.com", reason:"suspension", subject:"math")
+
+Jalen = Student.create(name: "Jalen Dobbs", school_id:1936, grade:9, school:"Ardsly HS", hours:6, guardian:"Odell McWaters", home_no:"(914) 804-3811", cell: "(917)418-3751", counselor_info:"Brian Nembhard, Brian@Nembhard.com", reason:"suspension", subject:"math")
+
 # # ===================== Instructor ========================== #
 Rolando = Instructor.create(name:"Rolando Rodrigez", subject:"science", specialty: "biology", hours:30)
 Hippolita = Instructor.create(name:"Hippolita Johnson", subject:"english", specialty: "Novels", hours:30)
 Ken = Instructor.create(name:"Ken Shultz", subject:"math", specialty: "Algebra", hours:30)
+Pete = Instructor.create(name:"Pete Jacobs", subject:"science", specialty: "chemistry", hours:24)
+Billy = Instructor.create(name:"Billy Wolf", subject:"math", specialty: "Pre-Algebra", hours:17)
+
+
 
 # # ===================== Sessions ========================== #
 seesion1 = Session.create(student_id: 1, instructor_id: 1, admin_id:1, date:"20190915T153000+0500", time:"9:30", home: true, subject:"biology", location:"123 Main street, Mt. Vernon, NY 10550", instruction:"Todd is a great student! ") 
@@ -37,3 +45,7 @@ seesion1 = Session.create(student_id: 1, instructor_id: 1, admin_id:1, date:"201
 seesion2 = Session.create(student_id:2, instructor_id: 3, admin_id:2, date:"201901015T140000+0500", time:"11:30", home: true, subject:"biology", location:"123 Main street, Mt. Vernon, NY 10550", instruction:"John needs double time ") 
 
 seesion3 = Session.create(student_id:3, instructor_id: 2, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
+
+seesion4 = Session.create(student_id:3, instructor_id: 2, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"english", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
+
+seesion5 = Session.create(student_id:4, instructor_id: 1, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
