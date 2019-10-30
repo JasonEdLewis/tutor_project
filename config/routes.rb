@@ -2,6 +2,7 @@ Rails.application.routes.draw do
     # INSTRUCTORS
   get '/instructors', to: 'instructors#index'
   get '/instructors/:id', to: 'instructors#show'
+  get '/instructors/:id', to: 'instructors#edit'
   post '/instructors', to: 'instructors#create'
   delete '/instructors/:id', to: 'instructors#destroy'
 
