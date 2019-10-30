@@ -4,16 +4,16 @@ class Api::V1::AuthController < ApplicationController
     def login
         is_authenticated = nil
         admin = Admin.find_by(username: params[:username])
-        is_authenticated = admin.authenticate(params[:password])
+      
        
-        if is_authenticated
+        if admin && admin.authenticate(params[:password])
             
             payload = { admin_id: admin.id }
             token = JWT.encode payload, 'sin-city' ,'HS256'
 
             render json: {token: token }
         else 
-            render json: {message: "Please enter valid..."}
+            render json: {error: "Please enter valid..."}
         end
     end
 
