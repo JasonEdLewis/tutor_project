@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/sessions', to: 'sessions#index'
   get '/sessions/:id', to: 'sessions#show'
   post '/sessions', to: 'sessions#create'
+  put '/sessions', to: 'sessions#update'
 
    # ADMINS
   # resources :admins
