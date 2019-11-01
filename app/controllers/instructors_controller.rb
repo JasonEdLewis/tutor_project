@@ -32,7 +32,6 @@ class InstructorsController < ApplicationController
         instructor = Instructor.find_by(id: params[:id])
         instructor.update(instructor_params)
         render json: instructor, except: [:created_at, :updated_at]
-
     end
 
     def destroy
