@@ -9,13 +9,15 @@ Rails.application.routes.draw do
   get '/students', to: 'students#index'
   get '/students/:id', to: 'students#show'
   post '/students', to: 'students#create'
+  patch '/students/:id', to: 'students#update'
+
 
     # SESSIONS
   # resources :sessions
   get '/sessions', to: 'sessions#index'
   get '/sessions/:id', to: 'sessions#show'
   post '/sessions', to: 'sessions#create'
-  put '/sessions', to: 'sessions#update'
+  patch '/sessions/:id', to: 'sessions#update'
 
    # ADMINS
   # resources :admins
