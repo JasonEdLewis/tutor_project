@@ -22,12 +22,8 @@ class SessionsController < ApplicationController
     end
 
     def update
-<<<<<<< HEAD
-        session = Session.find(id: params[:id])
-=======
-       
+
         session = Session.find(params[:id])
->>>>>>> 8fca9ccc8716f37ec90cb9ae7b69b3ce868806af
         session.update(update_session_params)
         render json: session
     end
