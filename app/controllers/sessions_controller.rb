@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
     end
 
     def updated
+        byebug
         session = Session.find(id: params[:id])
         session.update(update_session_params)
         render json: session
