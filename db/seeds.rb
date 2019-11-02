@@ -14,7 +14,7 @@ Hy = Admin.create(username:"Hy", password:"acb123")
 
 
 # ===================== Students ========================== #
-chad = Student.create(name: "Chad Spencer", school_id:1234, grade: 10, school:"Thorton", hours:8, guardian:"Betty Spencer ", home_no:"(646) 123-4567", cell: "(917) 398-4815", counselor_info:"Frank Harris, frank@Harris.com", reason:"suspension", subject:"math")
+chad = Student.create(name: "Chad Spencer", school_id:1234, grade: 10, school:"Thorton", hours:8, guardian:"Betty Spencer ", home_no:"(646) 123-4567", cell: "(917) 398-4815", counselor_info:"Frank Harris, frank@Harris.com", reason:"suspension", subject:"biology")
 
 john = Student.create(name: "John St.George", school_id:2345, grade: 8, school:"Grady", hours:10, guardian:"Heather St.George ", home_no:"(914) 555-6666", cell: "(914) 333-4444", counselor_info:"jim jones, jones@jimjines.com", reason:"medical", subject:"english")
 
