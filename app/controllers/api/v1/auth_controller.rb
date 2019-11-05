@@ -13,7 +13,7 @@ class Api::V1::AuthController < ApplicationController
 
             render json: {token: token }
         else 
-            render json: {error: "Please enter valid..."}
+            render json: {error: "Please enter valid Email or Password..."}
         end
     end
 
