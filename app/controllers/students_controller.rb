@@ -14,7 +14,6 @@ class StudentsController < ApplicationController
 
         def create
             student = Student.create(student_params)
-
             if student.valid?
                 student.save
                 render json: student
@@ -25,7 +24,7 @@ class StudentsController < ApplicationController
 
         private
         def student_params
-            params.require(:student).permit(:name,:school_id,:reason,:date,:hours,:school,:grade,:sped,:counselor_info,:guardian,:address,:home_no,:cell,:email)
+            params.require(:student).permit(:name,:school_id,:reason,:date,:hours,:school,:grade,:sped,:counselor_info,:guardian,:address,:home_no,:cell,:email,:subject)
         end
 end
 
