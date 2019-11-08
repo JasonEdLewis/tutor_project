@@ -13,14 +13,15 @@ Rails.application.routes.draw do
 
 
     # SESSIONS
-  # resources :sessions
-  get '/sessions', to: 'sessions#index'
-  get '/sessions/:id', to: 'sessions#show'
-  post '/sessions', to: 'sessions#create'
-  patch '/sessions/:id', to: 'sessions#update'
+  resources :sessions, only: [:index, :show,:edit, :update, :create, :destroy]
+  # get '/sessions', to: 'sessions#index'
+  # get '/sessions/:id', to: 'sessions#show'
+  # post '/sessions', to: 'sessions#create'
+  # patch '/sessions/:id', to: 'sessions#update'
+  # delete '/sessions/:id', to: 'sessions#destroy'
 
    # ADMINS
-  # resources :admins
+  resources :admins
 
 
   

@@ -28,6 +28,13 @@ class SessionsController < ApplicationController
         render json: session
     end
 
+    def destroy
+        session = Session.find(params[:id])
+        session.destroy
+    end 
+
+
+
 
     private
 
