@@ -22,9 +22,24 @@ class StudentsController < ApplicationController
             end
         end
 
+        def upadate
+            student = Student.find_by(id: params[:id])
+            student.valid?
+              student.upadate(update_params)
+              render json: student
+            else
+                render json: {message: "This student could not be found..."}
+            end
+        end
+
         private
+
         def student_params
             params.require(:student).permit(:name,:school_id,:reason,:date,:hours,:school,:grade,:sped,:counselor_info,:guardian,:address,:home_no,:cell,:email,:subject)
+        end
+
+        def update_params
+            params.permit(:id,:name,:school_id,:reason,:date,:hours,:school,:grade,:sped,:counselor_info,:guardian,:address,:home_no,:cell,:email,:subject)
         end
 end
 
