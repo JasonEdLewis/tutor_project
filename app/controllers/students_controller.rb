@@ -24,7 +24,7 @@ class StudentsController < ApplicationController
 
         def upadate
             student = Student.find_by(id: params[:id])
-            student.valid?
+            if student.valid?
               student.upadate(update_params)
               render json: student
             else
