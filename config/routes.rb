@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/students/:id', to: 'students#show'
   post '/students', to: 'students#create'
   patch '/students/:id', to: 'students#update'
+  delete '/students/:id', to: 'students#destroy'
 
 
     # SESSIONS
