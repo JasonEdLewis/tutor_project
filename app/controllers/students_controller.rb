@@ -24,7 +24,6 @@ class StudentsController < ApplicationController
 
         def update
             student = Student.find_by(id: params[:id])
-            byebug
             if student.valid?
               student.update(update_params)
               render json: student
