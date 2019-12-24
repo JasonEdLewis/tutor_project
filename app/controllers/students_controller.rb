@@ -22,8 +22,9 @@ class StudentsController < ApplicationController
             end
         end
 
-        def upadate
+        def update
             student = Student.find_by(id: params[:id])
+            byebug
             if student.valid?
               student.upadate(update_params)
               render json: student
