@@ -46,7 +46,7 @@ class InstructorsController < ApplicationController
         end
 
         def update_instructor_params
-            params.permit(:name,:subject,:specialty,:hours)
+            params.permit(:id,:name,:subject,:specialty,:hours)
         end
 
 
