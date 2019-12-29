@@ -46,6 +46,4 @@ seesion2 = Session.create(student_id:2, instructor_id: 3, admin_id:2, date:"2019
 
 seesion3 = Session.create(student_id:3, instructor_id: 2, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
 
-seesion4 = Session.create(student_id:3, instructor_id: 2, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"english", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
-
-seesion5 = Session.create(student_id:4, instructor_id: 1, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
+seesion4 = Session.create(student_id:4, instructor_id: 1, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
