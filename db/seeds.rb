@@ -14,7 +14,7 @@ Hy = Admin.create(username:"Hy", password:"acb123")
 
 
 # ===================== Students ========================== #
-chad = Student.create(name: "Chad Spencer", school_id:1234, grade: 10, school:"Thorton", hours:8, guardian:"Betty Spencer ", home_no:"(646) 123-4567", cell: "(917) 398-4815", counselor_info:"Frank Harris, frank@Harris.com", reason:"suspension", subject:"biology")
+chad = Student.create(name: "Chad Spencer", school_id:1234, grade: 10, school:"Thorton", hours:8, guardian:"Betty Spencer ", home_no:"(646) 123-4567", cell: "(917) 398-4815", counselor_info:"Frank Harris, frank@Harris.com", reason:"suspension", subject:"science")
 
 john = Student.create(name: "John St.George", school_id:2345, grade: 8, school:"Grady", hours:10, guardian:"Heather St.George ", home_no:"(914) 555-6666", cell: "(914) 333-4444", counselor_info:"jim jones, jones@jimjines.com", reason:"medical", subject:"english")
 
@@ -46,6 +46,4 @@ seesion2 = Session.create(student_id:2, instructor_id: 3, admin_id:2, date:"2019
 
 seesion3 = Session.create(student_id:3, instructor_id: 2, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
 
-seesion4 = Session.create(student_id:3, instructor_id: 2, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"english", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
-
-seesion5 = Session.create(student_id:4, instructor_id: 1, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
+seesion4 = Session.create(student_id:4, instructor_id: 1, admin_id:3, date:"20191021T123000+0500", time:"5:30", home: false, subject:"biology", location:"379 Brook street, Pelham, NY 10650", instruction:"Walter needs help ") 
